@@ -1,0 +1,28 @@
+
+
+  * {
+      box-sizing: border-box;
+  }
+  p {
+      color:red;
+      color: orage;
+
+  }
+  
+  .highlighted {
+    background-color: yellow;
+
+  }
+  
+  h1 {
+      margin: 50px;
+      border: 20px solid;
+      padding: 20px;
+      width: 100px;
+
+
+  }
+  
+  #page-title {
+    background-color: purple;
+  }
