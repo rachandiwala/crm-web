@@ -5,17 +5,27 @@
 <title>New Contact</title>
 </head>
 <body>
-<h1> New Contact </h1>
+
+<h1> Add a New Contact </h1>
 
 
 <form action="/contacts" method="post">
-<input type="text"name="id">    
-<input type="text"name="first_name">    
-<input type="text"name="last_name">    
-<input type="text"name="email_name">    
-<input type="text"name="note">    
 
-<input type="submit" name="submit">
+  <table>
+    
+<tr>  <td><label>  ID:          </label></td>     <td> <input type="text"name="id"> </td> </tr>
+    
+<tr> <td><label> First Name:   </label></td>     <td> <input type="text"name="first_name"> </td>  </tr> 
+   
+<tr>  <td><label> Last Name:    </label></td>     <td> <input type="text"name="last_name">  </td>   </tr>
+    
+<tr> <td><label> Email:        </label></td>     <td> <input type="Email"name="email">  </td>   </tr>
+  
+<tr><td><label> Notes:        </label></td>     <td> <input type="text"name="note">  </td>    </tr>
+    
+<td>                            <input type="submit" name="submit"> </td> 
+
+</table>
 </form>
 </body>
 </html>

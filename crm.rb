@@ -1,16 +1,16 @@
-require 'sinatra'
-require './rolodex'
-require './contact'
+require 'sinatra'     # Include Sinatra Library
+require './rolodex'   # Include rolodex.rb, which is in curretn Directory
+require './contact'   # Include contact.rb also in the the current Dirctory
 
-$rolodex = Rolodex.new    #create a global var
+$rolodex = Rolodex.new    #create a global Class var to have access to Sinatra
 
-get '/'  do
-  @crm_name = "My CRM"
-  erb :index
+get '/'  do               # root path/URL
+  @title = "My CRM Application"    # Create an Instence Var and set it equal to string "my crm"
+  erb :index              # Include/look into Views Directory for .erb file called index.erb
 end
 
-get "/contacts" do
-  @contacts = $rolodex.contacts
+get "/contacts" do        # get/Show path/URL /contacts
+  @contacts = $rolodex.contacts     # Create an instence @contacts and set it = to 
   erb :contacts
 end
 
@@ -19,7 +19,7 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-  contact = Contact.new(params[:id], params[:first_name], params[:last_name], params[:email], params[:note])
-  $rolodex.add_contact(contact)
+  new_contact = Contact.new(params[:id], params[:first_name], params[:last_name], params[:email], params[:note])
+  $rolodex.add_contact(new_contact)
   redirect to('/contacts')
 end

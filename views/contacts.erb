@@ -2,31 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title> View all contacts</title>
 </head>
 <body>
-<p>  </p>
+
+<center>
 <h1> Contacts </h1>
-<ul>
-<%= @contacts %>
+
+</center>
+
+        <ul>
+
 <% @contacts.each do |contact| %>
   
-  <li>
+  
     <%= contact.id %>
     <%= contact.first_name %>
     <%= contact.last_name %>
     <%= contact.email %>
     <%= contact.note %>
 
-  </li>
+  
 
   
 <% end %>
-
-
-<li>
-<a href="/contacts/new">Add a contact </a>
-</li>
 
 
 </ul>

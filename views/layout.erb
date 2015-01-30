@@ -3,19 +3,28 @@
 <head>
   <title> <%= @title %> </title>
   <link rel="stylesheet" type="text/css" href="/style.css">
-
-
-
-
 </head>
 
 <body>
-  <div id="container">
-  <header>
-          <h3>Current time: <%= Time.now.ctime %></h3>
+
+
+  <div heading ="container">
+    <header>
             <center>
-          <h1> Welcome to My CRM Application</h1>
+          <h1> Welcome to My CRM Application </h1>
             </center>
+    </header>
+  </div>
+     
+  <div time="container">
+        
+    <h3>Current Time &amp; Date: <%= Time.now.ctime %></h3>
+  
+  </div>
+
+  <div class="nav">
+  <div class ="container">
+
     <nav>
       <p>Main menu</p>
       <ul>
@@ -23,17 +32,24 @@
         <li><a href="/contacts/new">Add a new contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main>
-    <%= yield %>
-  </main>
-
-  <footer>
-      <p> BitMaker Labs &copy; 2015 </p>
-  </footer>
-
+  </div>
   </div>
 
+  <div class="jumbotron">
+  <div class="container">
+      <main>
+        <%= yield %>
+      </main>
+    </div>
+  </div>
+
+  <div class="foot">
+  <div class="container">
+    <footer>
+      <p> Raza &copy;BitMaker Labs &copy; 2015 </p>
+    </footer>
+
+  </div>
+  </div>
 </body>
 </html>
