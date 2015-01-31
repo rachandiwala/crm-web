@@ -2,12 +2,14 @@
 
   * {
       color: #FF0000;
-      
+      font-family: Verdana, Arial, san-serif;
 
   }
   
   .foot {
-    color: blue;
+    color: transparent;
+    text-align: center;
+  border: 400px;
   }
   
   
@@ -17,4 +19,13 @@
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.time {
+  color: white;
+}
+
+.logo {
+
+  margin: 400px;
 }

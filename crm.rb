@@ -4,7 +4,7 @@ require './contact'   # Include contact.rb also in the the current Dirctory
 
 $rolodex = Rolodex.new    #create a global Class var to have access to Sinatra
 
-$rolodex.add_contact(Contact.new("Johnny", "Bravo", "Johnny@bitmakerlabs.com", "Rockstar"))
+#$rolodex.add_contact(Contact.new("Johnny", "Bravo", "Johnny@bitmakerlabs.com", "Rockstar"))
 
 # A route that coresponds with the above user
 # A route to find and display the contact
@@ -13,6 +13,16 @@ get "/contacts/1000"  do
     @contact = $rolodex.find(1000)
 
     erb :show_contact
+  end
+
+get "/contacts/ :id" do
+    @contact = $rolodex.find(params[:id].to_i)
+
+      if @contact
+    erb :show_contact
+      else
+        raise Sinatra::NotFound   #raise basically return an error 
+      end
   end
 
 
