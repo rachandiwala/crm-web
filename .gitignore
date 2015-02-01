@@ -1,0 +1,5 @@
+#ingnore the default SQLite databse
+
+/*.sqlite3
+/*.sqlite3-journal
+
