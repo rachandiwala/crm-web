@@ -6,13 +6,12 @@
 <body>
 
 
-<h1> Contacts </h1>
+<h1> All Contacts </h1>
 
-
-
+<!-- Replace/update the block below to use SQLite3 Database to store data perminantly
         <ul>
 
-<% @contacts.each do |contact| %>
+          <% @contacts.each do |contact| %>
   
   
     <%= contact.id %>
@@ -20,12 +19,17 @@
     <%= contact.last_name %>
     <%= contact.email %>
     <%= contact.note %>
-
-  
-
-  
 <% end %>
+</ul>
 
+-->
+
+<ul>
+
+  <% @contacts.each do |contact| %>
+    <li> <a href="/contacts/<%= contact.id %>"><%= contact.first_name %><%= contact.last_name %> <%= contact.email %> <%= contact.note %></a></li>
+
+      <% end %>
 
 </ul>
 

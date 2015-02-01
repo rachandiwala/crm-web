@@ -1,3 +1,5 @@
+=begin
+
 class Rolodex
   attr_reader :contacts
 
@@ -30,3 +32,5 @@ def edit_contact(contact)
 end
 
 end
+
+=end
